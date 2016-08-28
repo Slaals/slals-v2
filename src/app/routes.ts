@@ -2,5 +2,5 @@
 import {AboutComponent} from './components/about';
 
 export default [
-    {path: '/about', component: AboutComponent, name: 'About'},
+  {path: '/about', component: AboutComponent, name: 'About'}
 ];

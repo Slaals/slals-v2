@@ -1,0 +1,65 @@
+@import "../../../style/_variables";
+
+#square-nav {
+  height: 100%;
+  width: 100%;
+  /* Internet Explorer 10 */
+  display:-ms-flexbox;
+  -ms-flex-pack:center;
+  -ms-flex-align:center;
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+  /* Safari, Opera, and Chrome */
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+  /* W3C */
+  display: flexbox;
+  box-pack: center;
+  box-align: center;
+  text-align: center;
+  .line-block {
+    position: relative;
+    margin: 0 auto;
+    height: $box-size;
+    width: $box-size;
+    transition: width 1s, height 1s;
+    background-image: url('/img/slals.png');
+    background-repeat: no-repeat;
+    background-size: $box-size;
+    background-position: center;
+    .block {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s;
+      h1 {
+        padding: 30px;
+      }
+      &.block-tl {
+        top: 0;
+        left: 0;
+      }
+      &.block-tr {
+        top: 0;
+        right: 0;
+      }
+      &.block-bl {
+        bottom: 0;
+        left: 0;
+      }
+      &.block-br {
+        bottom: 0;
+        right: 0;
+      }
+    }
+    &:hover {
+      height: calc(#{$box-size} * 2.1);
+      width: calc(#{$box-size} * 2.1);
+      .block {
+        opacity: 1;
+      }
+    }
+  }
+}

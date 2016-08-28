@@ -1,6 +1,6 @@
 /// <reference path="../typings/main.d.ts"/>
 import 'ts-helpers';
-import {enableProdMode, provide} from '@angular/core';
+import {enableProdMode} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
 import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
@@ -19,11 +19,6 @@ if (process.env.ENV === 'prod') {
  * our top level component that holds all of our components
  */
 import {App} from './app/index';
-
-/*
- * Variables to inject
- */
-let apiEndpoint = 'http://localhost:3000';
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject

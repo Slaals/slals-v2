@@ -1,9 +1,6 @@
 @import "../style/_variables";
 
 main {
-  padding-top: $size-header-height;
-  margin: 0;
-  &.fullpage {
-    padding: 0;
-  }
+  width: 100%;
+  height: 100%;
 }
