@@ -1,8 +1,8 @@
 <div id="square-nav">
-  <div class="line-block">
-    <div class="block block-tl"><h1>me</h1></div>
-    <div class="block block-tr"><h1>bl</h1></div>
-    <div class="block block-bl"><h1>pr</h1></div>
-    <div class="block block-br"><h1>lv</h1></div>
+  <div class="line-block" [class.home]="isInHome()">
+    <a [routerLink]="['About']"><div class="block block-tl"><h1>me</h1></div></a>
+    <a [routerLink]="['Blog']"><div class="block block-tr"><h1>bl</h1></div></a>
+    <a [routerLink]="['Project']"><div class="block block-bl"><h1>pr</h1></div></a>
+    <a [routerLink]="['Interests']"><div class="block block-br"><h1>lv</h1></div></a>
   </div>
 </div>

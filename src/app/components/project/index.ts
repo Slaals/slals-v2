@@ -3,10 +3,10 @@ import {Component} from '@angular/core';
 /* beautify ignore:end */
 
 @Component({
-    selector: 'about',
+    selector: 'project',
     styles: [require('./style.scss').toString()],
     template: require('./template.html')
 })
-export class AboutComponent {
+export class ProjectComponent {
 
 }
