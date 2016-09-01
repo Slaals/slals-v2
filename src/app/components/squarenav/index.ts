@@ -1,6 +1,6 @@
 /* beautify ignore:start */
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated';
+import {ROUTER_DIRECTIVES, Router, OnActivate} from '@angular/router-deprecated';
 /* beautify ignore:end */
 
 @Component({
@@ -12,11 +12,5 @@ import {ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated';
 export class SquarenavComponent {
 
   constructor(public router: Router) { }
-
-  isInHome(): boolean {
-    if(!this.router.currentInstruction) return true;
-    let current: string = this.router.currentInstruction.component.routeName;
-    console.log('lol', current);
-    return current == 'Home';
-  }
+  
 }

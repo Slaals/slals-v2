@@ -3,7 +3,6 @@
 #square-nav {
   height: 100%;
   width: 100%;
-  position: absolute;
   /* Internet Explorer 10 */
   display:-ms-flexbox;
   -ms-flex-pack:center;
@@ -24,15 +23,20 @@
   .line-block {
     position: relative;
     margin: 0 auto;
-    &.home {
-      height: $box-size * 2.1;
-      width: $box-size * 2.1;
+    &:hover {
+      height: $box-size * 1.8;
+      width: $box-size * 1.8;
+      .block {
+        opacity: 1;
+      }
     }
+    height: $box-size * 2.1;
+    width: $box-size * 2.1;
     transition: width 1s, height 1s;
     .block {
       position: absolute;
       opacity: 0.3;
-      transition: opacity 1s, color 0.15s;
+      transition: opacity 1s, color 0.15s, left 1s, right 1s, top 1s, bottom 1s;
       border: 1px solid $color-neutral;
       min-height: $box-size / 2;
       max-height: $box-size / 2;
@@ -59,13 +63,6 @@
       }
       &:hover {
         border-color: $color-red;
-      }
-    }
-    &:hover {
-      height: $box-size * 1.8;
-      width: $box-size * 1.8;
-      .block {
-        opacity: 1;
       }
     }
   }
