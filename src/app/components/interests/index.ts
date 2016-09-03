@@ -1,6 +1,5 @@
 /* beautify ignore:start */
 import {Component} from '@angular/core';
-import {OnDeactivate} from '@angular/router-deprecated';
 /* beautify ignore:end */
 
 @Component({
