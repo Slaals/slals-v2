@@ -20,4 +20,13 @@ export class AboutComponent {
     else this.state = 'active';
   }
 
+  routerOnDeactivate(): any {
+    this.switchState();
+    return new Promise((resolve) => {
+      setTimeout(function() {
+        resolve(true);
+      }, 1000);
+    });
+  }
+
 }

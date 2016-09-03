@@ -23,6 +23,7 @@
   .line-block {
     position: relative;
     margin: 0 auto;
+    z-index: 10;
     &:hover {
       height: $box-size * 1.8;
       width: $box-size * 1.8;
@@ -45,21 +46,32 @@
       h1 {
         line-height: $box-size / 2;
       }
+      &.active {
+        background-color: $color-red;
+        color: white;
+        border: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
       &.block-tl {
         top: 0;
         left: 0;
       }
       &.block-tr {
         top: 0;
-        right: 0;
+        left: 100%;
+        transform: translate(-100%, 0);
       }
       &.block-bl {
-        bottom: 0;
+        top: 100%;
         left: 0;
+        transform: translate(0, -100%);
       }
       &.block-br {
-        bottom: 0;
-        right: 0;
+        top: 100%;
+        left: 100%;
+        transform: translate(-100%, -100%);
       }
       &:hover {
         border-color: $color-red;
