@@ -16,8 +16,18 @@ export class SquarenavComponent {
   /**
    * Uh... Router in beta - native routerLinkActive not available, gratz.
    */
-  isActive(route: string): boolean {
-    return this.router.parent.currentInstruction.component.routeName === route;
+  isActive(routes: string[]): boolean {
+    let active: boolean = false;
+    if(!this.router.currentInstruction) return false;
+    let currentRoute: string = this.router.currentInstruction.component.routeName;
+    routes.forEach(function(route: string) {
+      if(currentRoute === route) active = true;
+    });
+    return active;
+  }
+
+  backHome(): void {
+    this.router.navigate(['/']);
   }
 
 }
