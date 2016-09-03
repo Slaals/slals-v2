@@ -26,8 +26,4 @@ export class SquarenavComponent {
     return active;
   }
 
-  backHome(): void {
-    this.router.navigate(['/']);
-  }
-
 }

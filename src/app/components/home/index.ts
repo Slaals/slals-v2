@@ -4,8 +4,7 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'home',
-    styles: [require('./style.scss').toString()],
-    template: require('./template.html')
+    template: '<i></i>'
 })
 export class HomeComponent {
 

@@ -3,6 +3,7 @@
 #square-nav {
   height: 100%;
   width: 100%;
+  z-index: 2;
   /* Internet Explorer 10 */
   display:-ms-flexbox;
   -ms-flex-pack:center;
@@ -23,7 +24,6 @@
   .line-block {
     position: relative;
     margin: 0 auto;
-    z-index: 10;
     width: 100%;
     height: 100%;
     &.initial:hover {
@@ -41,12 +41,13 @@
     .block {
       position: absolute;
       opacity: 0.3;
-      transition: opacity 1s, color 0.15s, left 1s, right 1s, top 1s, bottom 1s;
+      transition: opacity 1s, color 0.15s, left 1s , right 1s, top 1s, bottom 1s, transform 1s;
       border: 1px solid $color-neutral;
       min-height: $box-size / 2;
       max-height: $box-size / 2;
       min-width: $box-size / 1.5;
       max-width: $box-size / 1.5;
+      z-index: 3;
       h1 {
         line-height: $box-size / 2;
       }
@@ -63,35 +64,36 @@
         top: 0;
         left: 0;
         &.active {
-          top: 280px;
-          left: 100px;
+          top: calc(25% - #{$pad});
+          left: 115px;
+          transform: translate(0, 25%);
         }
       }
       &.block-tr {
         top: 0;
-        left: 100%;
-        transform: translate(-100%, 0);
+        right: 0;
         &.active {
-          top: 280px;
-          left: 100px;
+          top: calc(25% - #{$pad});
+          right: 100%;
+          transform: translate(100%, 25%);
         }
       }
       &.block-bl {
-        top: 100%;
+        bottom: 0;
         left: 0;
-        transform: translate(0, -100%);
         &.active {
-          top: 355px;
-          left: 0px;
+          bottom: 75%;
+          left: 0;
+          transform: translate(0, 25%);
         }
       }
       &.block-br {
-        top: 100%;
-        left: 100%;
-        transform: translate(-100%, -100%);
+        bottom: 0;
+        right: 0;
         &.active {
-          top: 355px;
-          left: 100px;
+          bottom: 75%;
+          right: 100%;
+          transform: translate(100%, 25%);
         }
       }
       &:hover {
