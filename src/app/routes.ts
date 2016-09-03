@@ -6,7 +6,7 @@ import {ProjectComponent} from './components/project';
 import {InterestsComponent} from './components/interests';
 
 export default [
-  {path: '/', component: HomeComponent, name: 'Home', useAsDefault: true},
+  {path: '/', component: HomeComponent, name: 'Home'},
   {path: '/about', component: AboutComponent, name: 'About'},
   {path: '/blog', component: BlogComponent, name: 'Blog'},
   {path: '/project', component: ProjectComponent, name: 'Project'},
