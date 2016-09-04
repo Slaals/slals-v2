@@ -7,6 +7,11 @@ main {
     height: 100%;
     position: relative;
     padding: $pad;
+    footer {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
   }
   .row {
     margin: 0;

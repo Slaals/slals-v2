@@ -6,6 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, p, ul li {
@@ -29,15 +30,15 @@ a:hover,
 a:focus {
   text-decoration: none;
   transition: color 0.1s;
-}
-
-a,
-a:active {
   color: $color-neutral;
 }
 
-a:hover, a:focus {
+a:hover {
   color: $color-red;
+}
+
+.row {
+  margin: 0;
 }
 
 .awesome-content {
@@ -46,18 +47,29 @@ a:hover, a:focus {
   left: 0;
   padding: $pad;
   z-index: 2;
-  p {
+  .content {
     animation-name: paragraph-pop;
+    animation-duration: 1s;
     a {
       padding-bottom: 2px;
       border-bottom: 1px dashed $color-red;
     }
-    a:hover, a:focus {
+    a:hover {
       border-bottom: 1px solid $color-red;
     }
   }
   h1 {
     color: $color-red;
+  }
+}
+
+footer {
+  a {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed $color-red;
+  }
+  a:hover {
+    border-bottom: 1px solid $color-red;
   }
 }
 
@@ -69,5 +81,61 @@ a:hover, a:focus {
   to {
     transform: translate(0, 0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    visibility: hidden;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  p, ul li {
+    font-size: 1em;
+  }
+  ul {
+    padding-left: 30px;
+  }
+  .container {
+    padding: 0 !important;
+  }
+  h1 {
+    line-height: 50px !important;
+  }
+  .awesome-content {
+    top: 0;
+  }
+  .line-block {
+    &.initial .block, .block.active {
+      position: absolute !important;
+    }
+    .block {
+      position: fixed !important;
+      min-width: 70px !important;
+      max-width: 70px !important;
+      min-height: 50px !important;
+      max-height: 50px !important;
+      &.block-tl.active {
+        left: 150px !important;
+        top: 75px !important;
+        transform: none !important;
+      }
+      &.block-tr.active {
+        top: 75px !important;
+        right: 100% !important;
+        transform: translate(175%, 0) !important;
+      }
+      &.block-br.active {
+        bottom: 100% !important;
+        right: 100% !important;
+        transform: translate(175%, 125px) !important;
+      }
+      &.block-bl.active {
+        left: 50px !important;
+        bottom: 100% !important;
+        transform: translate(0, 125px) !important;
+      }
+    }
   }
 }

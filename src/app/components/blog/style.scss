@@ -1,10 +1,13 @@
-h1, p {
+h1 {
   animation-duration: 1s;
 }
 h1, hr {
   animation-name: header-pop;
   animation-duration: 1s;
   padding-left: 100px;
+}
+hr {
+  margin-top: 40px;
 }
 
 @keyframes header-pop {
@@ -15,5 +18,14 @@ h1, hr {
   to {
     transform: translate(0, 0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    padding-left: 47px;
+  }
+  hr {
+    margin-top: 20px;
   }
 }
