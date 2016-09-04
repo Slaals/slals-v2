@@ -7,35 +7,34 @@ html, body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-}
-
-h1, h2, h3, h4, p, ul li {
-  font-family: 'Josefin Sans', sans-serif;
-  margin: 0;
-}
-
-p, ul li {
-  font-size: 1.2em;
-  margin-bottom: 17px;
-  color: $color-neutral;
+  h1, h2, h3, h4, p, ul li {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  p, ul li {
+    font-size: 1.2em;
+    margin-bottom: 17px;
+    color: $color-neutral;
+  }
+  a,
+  a:active,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    -webkit-transition: color 0.1s linear;
+    transition: color 0.1s;
+    color: $color-neutral;
+  }
+  a:hover {
+    color: $color-red;
+  }
 }
 
 ul {
   list-style: circle;
-}
-
-a,
-a:active,
-a:hover,
-a:focus {
-  text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-  transition: color 0.1s;
-  color: $color-neutral;
-}
-
-a:hover {
-  color: $color-red;
 }
 
 .row {
@@ -102,7 +101,7 @@ footer {
     visibility: hidden;
   }
   h1 {
-    font-size: 1.8em;
+    font-size: 1.8em !important;
   }
   p, ul li {
     font-size: 1em;
