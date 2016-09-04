@@ -29,6 +29,7 @@ a:active,
 a:hover,
 a:focus {
   text-decoration: none;
+  -webkit-transition: color 0.1s linear;
   transition: color 0.1s;
   color: $color-neutral;
 }
@@ -48,6 +49,8 @@ a:hover {
   padding: $pad;
   z-index: 2;
   .content {
+    -webkit-animation-name: paragraph-pop;
+    -webkit-animation-duration: 1s;
     animation-name: paragraph-pop;
     animation-duration: 1s;
     a {
@@ -73,6 +76,16 @@ footer {
   }
 }
 
+@-webkit-keyframes paragraph-pop {
+  from {
+    -webkit-transform: translate(0, -10px);
+    opacity: 0;
+  },
+  to {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @keyframes paragraph-pop {
   from {
     transform: translate(0, -10px);
