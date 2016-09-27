@@ -46,6 +46,7 @@
       min-width: $box-size / 1.5;
       max-width: $box-size / 1.5;
       z-index: 3;
+      transform: translate(0, 0);
       h1 {
         line-height: $box-size / 2;
       }
@@ -64,8 +65,8 @@
         left: 0;
         &.active {
           top: calc(25% - #{$pad});
-          left: 115px;
-          transform: translate(0, 25%);
+          left: 105px;
+          transform: translate(0, 20%);
         }
       }
       &.block-tr {
@@ -74,7 +75,7 @@
         &.active {
           top: calc(25% - #{$pad});
           right: 100%;
-          transform: translate(100%, 25%);
+          transform: translate(100%, 20%);
         }
       }
       &.block-bl {
@@ -83,7 +84,7 @@
         &.active {
           bottom: 75%;
           left: 0;
-          transform: translate(0, 25%);
+          transform: translate(0, 20%);
         }
       }
       &.block-br {
@@ -92,7 +93,7 @@
         &.active {
           bottom: 75%;
           right: 100%;
-          transform: translate(100%, 25%);
+          transform: translate(100%, 20%);
         }
       }
       &:hover {
