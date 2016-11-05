@@ -1,6 +1,5 @@
-[:clipboard:](https://github.com/NMSFrance/ourdoc)
 # Slals
-Coucou
+http://slals.io/
 
 # Prérequis
 npm : https://nodejs.org/en/download/
